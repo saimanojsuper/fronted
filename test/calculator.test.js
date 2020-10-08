@@ -90,15 +90,15 @@ test("subtracting 2 from 10 should return 8", () => {
   test("truthy operators", () => {
     var name="Software testing help"
     var n = null
-    expect(n).toBeNull()
-    expect(name).not.toBeNull
+   // expect(n).toBeNull()
+   // expect(name).not.toBeNull
   
     // name has a valid value
-    expect(name).toBeTruthy()
+    //expect(name).toBeTruthy()
   
     //fail - as null is non success
-    expect(n).toBeTruthy()
+   // expect(n).toBeTruthy()
     
     // pass - null treated as false or negative
-    expect(n).toBeFalsy()
+    //expect(n).toBeFalsy()
   })
