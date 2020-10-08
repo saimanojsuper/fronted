@@ -1,0 +1,19 @@
+{
+  "name": "project-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "collectCoverage": true
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.2",
+    "jest-html-reporter": "^3.2.0",
+    "sonarqube-scanner": "^2.7.0"
+  }
+}
