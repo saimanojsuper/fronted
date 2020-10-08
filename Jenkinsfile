@@ -14,5 +14,10 @@ pipeline {
                         echo 'test ended'
                     }
                 }
+      stage('Sonarqube'){
+        steps{
+          bat 'sonar-scanner'
+        }
+      }
     }
 }
