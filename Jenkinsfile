@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
       stage('Test') {
                     steps {
                         echo 'test started'
-                        bat 'npm run test'
+                        sh 'npm run test'
                         echo 'test ended'
                     }
                 }
       stage('Sonarqube'){
         steps{
-          bat 'sonar-scanner'
+          sh 'sonar-scanner'
         }
       }
     }
