@@ -17,11 +17,11 @@ pipeline {
     stage('SonarQube analysis') {
       steps {
         script {
-          // requires SonarQube Scanner 2.8+
-          scannerHome = tool 'sonar'
+          def sonarqubeScannerHome = tool name: 'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         }
         withSonarQubeEnv('SonarQube Scanner') {
-          sh "${scannerHome}/bin/sonar-scanner"
+          sh "${sonarqubeScannerHome}/bin/sonar-scanner -e -Dsonar.host.url=http://3.94.115.145:9000 -Dsonar.login=${sonarLogin} -Dsonar.projectName=sonar-test -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=GS -Dsonar.sources=test/  "
+     
            }
         }
       }
