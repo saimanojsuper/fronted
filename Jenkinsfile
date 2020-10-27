@@ -15,7 +15,7 @@ pipeline {
                 }
       stage('Sonarqube'){
         steps{
-          sh 'sonar-scanner'
+          sh "${scannerHome}/bin/sonar-scanner"
         }
       }
     }
